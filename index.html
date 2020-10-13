@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div>
+  <header>
+    <img class="centre-logo-image" src="images/logo.jpg" />
+  </header>
+
+  <div class="treats">
+    {% for treat in site.treats %}
+      <div class="treat">
+        <div class="treat-image-wrapper">
+          <img class="treat-image" src="{{ treat.image }}" />
+        </div>
+        <div class="treat-details">
+          {{ treat.name }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

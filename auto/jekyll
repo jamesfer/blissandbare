@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+
+#docker run --rm -it -v "$PWD:/src/jekyll" -v "$PWD/vendor/bundle:/usr/local/bundle" jekyll/jekyll:3.8 "$@"
+docker-compose run --service-ports jekyll "$@"

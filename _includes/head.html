@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ site.title | escape }}{% if page.title %} - {{ page.title | escape }}{% endif %}</title>
+
+  <!-- Description is used as the default description of bookmarks by some browsers -->
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords" content="{{ site.keywords }}">
+  <meta name="author" content="James Ferguson">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+  <!-- Google fonts -->
+  <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600|Oswald|Material+Icons' rel='stylesheet' type='text/css'>-->
+  <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Noto+Sans&display=swap" rel="stylesheet">
+
+  <!-- Indicates that www.domain.com/index.html === www.domain.com -->
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+</head>
